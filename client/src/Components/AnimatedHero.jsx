@@ -77,14 +77,14 @@ const AnimatedHero = ({ onGetStarted }) => {
 
       {/* Hero Section */}
       <section className="flex items-center justify-center min-h-[calc(100vh-80px)] px-6 py-12 relative z-10">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Side - Logo (Top on mobile) */}
-          <div className="relative order-1 lg:order-2">
+        <div className="max-w-7xl mx-auto w-full flex flex-col items-center">
+          {/* Logo Section - First */}
+          <div className="relative mb-8 pb-8 md:pb-0lg:pb-16">
             <div className="relative">
               <img
                 src={HERO.teacherImageUrl || logoSvg}
                 alt={BRAND.teacherName}
-                className="w-100 h-100 object-contain relative z-10 animate-float"
+                className="w-80 h-80 md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px] object-contain relative z-10"
               />
               {/* Subtle glow effect behind logo */}
               <div className={`absolute inset-0 w-full h-full rounded-full blur-3xl transition-all duration-300 ${isDarkMode ? 'bg-primary/20' : 'bg-primary/30'}`}></div>
@@ -96,14 +96,14 @@ const AnimatedHero = ({ onGetStarted }) => {
             <div className={`absolute bottom-8 right-8 w-3 h-3 rounded-full transition-colors duration-300 ${isDarkMode ? 'bg-primary-light' : 'bg-primary/30'}`}></div>
           </div>
 
-          {/* Right Side - Text Content (Bottom on mobile) */}
-          <div className="text-right space-y-6 order-2 lg:order-1 relative z-10">
+          {/* Text Content - Below Logo */}
+          <div className="text-center space-y-6 relative z-10 w-full">
             <div className="inline-flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 bg-primary-light/20 text-primary dark:text-primary-light rounded-full text-xs md:text-sm font-medium font-cairo">{HERO.topText}</div>
             <h1 className="text-5xl lg:text-6xl font-extrabold leading-tight transition-colors duration-300 text-primary dark:text-primary-light">
               {HERO.mainTitle}
             </h1>
 
-            <p className={`text-2xl leading-relaxed max-w-2xl transition-colors duration-300 ${isDarkMode ? 'text-gray-300' : 'text-gray-800'}`}>
+            <p className={`text-2xl leading-relaxed max-w-3xl mx-auto transition-colors duration-300 ${isDarkMode ? 'text-gray-300' : 'text-gray-800'}`}>
               {HERO.subtitle}
             </p>
 
