@@ -761,21 +761,23 @@ export default function HomePage() {
 
 
       {/* CTA Section */}
-      <section className={`py-20 bg-gradient-to-r from-primary via-primary-dark to-accent/20 transition-all duration-700 ease-out ${heroLoaded
+      <section className={`relative py-20 transition-all duration-700 ease-out ${heroLoaded
         ? 'opacity-100 translate-y-0'
         : 'opacity-0 translate-y-8'
         }`}
         style={{ transitionDelay: '3600ms' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Background with proper colors for light and dark mode */}
+        <div className="absolute inset-0 bg-gradient-to-r from-teal-600 via-teal-700 to-cyan-700 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className={`transition-all duration-700 ease-out ${heroLoaded
             ? 'opacity-100 scale-100'
             : 'opacity-0 scale-95'
             }`}
             style={{ transitionDelay: '3800ms' }}>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white dark:text-white mb-6 drop-shadow-lg">
               هل أنت مستعد لبدء رحلة التعلم؟
             </h2>
-            <p className="text-xl text-primary-light/20 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-white/90 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
               اكتشف مجموعة متنوعة من الكورسات التعليمية المصممة خصيصاً لمساعدتك في تحقيق أهدافك الأكاديمية
             </p>
           </div>
@@ -785,13 +787,13 @@ export default function HomePage() {
             }`}
             style={{ transitionDelay: '4000ms' }}>
             <Link to="/signup">
-              <button className="px-8 py-4 btn-primary text-white font-semibold rounded-full text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+              <button className="px-8 py-4 bg-white text-teal-700 dark:bg-amber-500 dark:text-gray-900 font-semibold rounded-full text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 hover:bg-teal-50 dark:hover:bg-amber-400">
                 ابدأ مجاناً
               </button>
             </Link>
 
             <Link to="/qa">
-              <button className="px-8 py-4 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded-full text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2">
+              <button className="px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/30 dark:border-amber-500/50 text-white dark:text-amber-400 hover:bg-white/20 dark:hover:bg-amber-500/20 font-semibold rounded-full text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2">
                 <FaQuestionCircle className="w-5 h-5" />
                 اطرح سؤالاً
               </button>

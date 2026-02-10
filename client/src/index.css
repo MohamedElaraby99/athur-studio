@@ -96,57 +96,69 @@
    ============================================ */
 
 .dark {
+  --color-primary: #eba72d;
+  --color-primary-light: #f5c85a;
+  --color-primary-dark: #d4941f;
+  --color-primary-darker: #b8821a;
   --color-text-primary: #f9fafb;
   --color-text-secondary: #9ca3af;
+  --color-bg-light: rgba(235, 167, 45, 0.1);
+  --color-bg-primary: rgba(235, 167, 45, 0.2);
 }
 
-/* Dark Mode Overrides per Theme */
+/* Dark Mode Overrides per Theme - All use #eba72d in dark mode */
 [data-theme="blue"].dark {
-  --color-primary: #3b82f6;
-  --color-primary-light: #60a5fa;
-  --color-primary-dark: #2563eb;
-  --color-bg-light: rgba(59, 130, 246, 0.1);
-  --color-bg-primary: rgba(59, 130, 246, 0.2);
+  --color-primary: #eba72d;
+  --color-primary-light: #f5c85a;
+  --color-primary-dark: #d4941f;
+  --color-primary-darker: #b8821a;
+  --color-bg-light: rgba(235, 167, 45, 0.1);
+  --color-bg-primary: rgba(235, 167, 45, 0.2);
 }
 
 [data-theme="green"].dark {
-  --color-primary: #22c55e;
-  --color-primary-light: #4ade80;
-  --color-primary-dark: #16a34a;
-  --color-bg-light: rgba(34, 197, 94, 0.1);
-  --color-bg-primary: rgba(34, 197, 94, 0.2);
+  --color-primary: #eba72d;
+  --color-primary-light: #f5c85a;
+  --color-primary-dark: #d4941f;
+  --color-primary-darker: #b8821a;
+  --color-bg-light: rgba(235, 167, 45, 0.1);
+  --color-bg-primary: rgba(235, 167, 45, 0.2);
 }
 
 [data-theme="red"].dark {
-  --color-primary: #ef4444;
-  --color-primary-light: #f87171;
-  --color-primary-dark: #dc2626;
-  --color-bg-light: rgba(239, 68, 68, 0.1);
-  --color-bg-primary: rgba(239, 68, 68, 0.2);
+  --color-primary: #eba72d;
+  --color-primary-light: #f5c85a;
+  --color-primary-dark: #d4941f;
+  --color-primary-darker: #b8821a;
+  --color-bg-light: rgba(235, 167, 45, 0.1);
+  --color-bg-primary: rgba(235, 167, 45, 0.2);
 }
 
 [data-theme="purple"].dark {
-  --color-primary: #8b5cf6;
-  --color-primary-light: #a78bfa;
-  --color-primary-dark: #7c3aed;
-  --color-bg-light: rgba(139, 92, 246, 0.1);
-  --color-bg-primary: rgba(139, 92, 246, 0.2);
+  --color-primary: #eba72d;
+  --color-primary-light: #f5c85a;
+  --color-primary-dark: #d4941f;
+  --color-primary-darker: #b8821a;
+  --color-bg-light: rgba(235, 167, 45, 0.1);
+  --color-bg-primary: rgba(235, 167, 45, 0.2);
 }
 
 [data-theme="orange"].dark {
-  --color-primary: #f97316;
-  --color-primary-light: #fb923c;
-  --color-primary-dark: #ea580c;
-  --color-bg-light: rgba(249, 115, 22, 0.1);
-  --color-bg-primary: rgba(249, 115, 22, 0.2);
+  --color-primary: #eba72d;
+  --color-primary-light: #f5c85a;
+  --color-primary-dark: #d4941f;
+  --color-primary-darker: #b8821a;
+  --color-bg-light: rgba(235, 167, 45, 0.1);
+  --color-bg-primary: rgba(235, 167, 45, 0.2);
 }
 
 [data-theme="teal"].dark {
-  --color-primary: #005F6A;
-  --color-primary-light: #1abcc9;
-  --color-primary-dark: #004a52;
-  --color-bg-light: rgba(0, 95, 106, 0.1);
-  --color-bg-primary: rgba(0, 95, 106, 0.2);
+  --color-primary: #eba72d;
+  --color-primary-light: #f5c85a;
+  --color-primary-dark: #d4941f;
+  --color-primary-darker: #b8821a;
+  --color-bg-light: rgba(235, 167, 45, 0.1);
+  --color-bg-primary: rgba(235, 167, 45, 0.2);
 }
 
 /* ============================================
@@ -230,6 +242,21 @@
 .btn-primary:hover {
   background-color: var(--color-primary-dark);
   transform: scale(1.05);
+}
+
+/* Logo color in dark mode - Convert teal (#005F6A) to golden (#eba72d) */
+.dark img[src*="3.svg"],
+.dark img[alt="logo"],
+.dark img[src*="logo"] {
+  filter: brightness(0) saturate(100%) invert(67%) sepia(89%) saturate(1352%) hue-rotate(1deg) brightness(98%) contrast(92%);
+  transition: filter 0.3s ease;
+}
+
+/* Ensure all SVG paths use golden color in dark mode */
+.dark svg path[fill="#005F6A"],
+.dark svg path[fill="#004a52"],
+.dark svg path[fill="#00363a"] {
+  fill: #eba72d !important;
 }
 
 /* خلفية Hero */

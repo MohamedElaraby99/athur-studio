@@ -50,13 +50,13 @@ export const NAVBAR = {
 // ============================================
 export const HERO = {
     // العنوان الرئيسي
-    mainTitle: "استوديو تصوير متخصص للمدرسين والاطباء والمهندسين وكل صناع المحتوي",
+    mainTitle: "للطلاب: تجربة تعليمية فريدة ومميزة",
     // العنوان الفرعي
-    subtitle: "جودة 4K | شاشة تفاعلية | احترافية في كل تفصيلة",
+    subtitle: "استمتع بتجربة تعليمية استثنائية مصممة خصيصاً لمساعدتك على التفوق والتميز في دراستك",
     // النص أعلى العنوان
-    topText: "🎬 استوديو اثر - جودة احترافية بكل معنى الكلمة",
+    topText: "🎓 منصة تعليمية متكاملة - تجربة فريدة للطلاب",
     // نص زر الاشتراك
-    ctaButtonText: "احجز جلستك الآن ! 📸",
+    ctaButtonText: "ابدأ رحلتك التعليمية الآن ! 🚀",
     // رابط زر الاشتراك
     ctaButtonLink: "/signup",
     // صورة المعلم في الهيرو (ضع رابط الصورة هنا)
@@ -72,10 +72,10 @@ export const HERO = {
 // ============================================
 export const CONTACT = {
     // رقم الحجز والاستفسارات
-    bookingPhone: "+201207039410",
+    bookingPhone: "+201284999924",
     bookingPhoneLabel: "الحجز والاستفسارات",
     // رقم الدعم الفني
-    supportPhone: "+201207039410",
+    supportPhone: "+201284999924",
     supportPhoneLabel: "الدعم الفني",
     // البريد الإلكتروني
     email: "support@mansety.com",
@@ -91,24 +91,24 @@ export const CONTACT = {
 // ============================================
 export const SOCIAL_MEDIA = {
     facebook: {
-        url: "https://www.facebook.com/",
+        url: "https://www.facebook.com/profile.php?id=61584090482581",
         label: "Facebook",
         enabled: true,
     },
     youtube: {
         url: "https://youtube.com/",
         label: "YouTube",
-        enabled: true,
+        enabled: false,
     },
     tiktok: {
         url: "https://www.tiktok.com/",
         label: "Tiktok",
-        enabled: true,
+        enabled: false,
     },
     instagram: {
         url: "https://www.instagram.com/",
         label: "Instagram",
-        enabled: true,
+        enabled: false,
     },
     twitter: {
         url: "https://twitter.com/",
@@ -116,9 +116,9 @@ export const SOCIAL_MEDIA = {
         enabled: false,
     },
     whatsapp: {
-        url: "https://wa.me/201207039410",
+        url: "https://wa.me/201284999924",
         label: "WhatsApp",
-        enabled: true,
+        enabled: false,
     },
 };
 
